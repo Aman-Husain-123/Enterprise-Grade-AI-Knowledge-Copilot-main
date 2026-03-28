@@ -52,7 +52,7 @@ async def get_db():
 async def init_db():
     """Create all tables and indexes on startup."""
     # Import all models so they are registered with Base.metadata
-    from app.models import user, conversation, knowledge, search, workflow  # noqa: F401
+    from app.models import user, conversation, knowledge, search, workflow, api_key  # noqa: F401
 
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all, checkfirst=True)

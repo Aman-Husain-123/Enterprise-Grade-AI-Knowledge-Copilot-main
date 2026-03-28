@@ -43,7 +43,7 @@ async def main():
                 is_active=True,
             ))
             await session.flush()
-            print("✓ Demo user created: demo@knowledgeforge.ai / demo12345")
+            print("SUCCESS: Demo user created: demo@knowledgeforge.ai / demo12345")
 
         # ── Admin user ─────────────────────────────────────────────────────
         result2 = await session.execute(
@@ -61,7 +61,7 @@ async def main():
                 is_active=True,
             ))
             await session.flush()
-            print("✓ Admin user created: admin@knowledgeforge.ai / Admin1234!")
+            print("SUCCESS: Admin user created: admin@knowledgeforge.ai / Admin1234!")
 
         await session.commit()
 
